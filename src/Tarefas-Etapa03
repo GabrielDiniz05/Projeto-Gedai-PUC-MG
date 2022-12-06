@@ -1,0 +1,8 @@
+|ID    | Descrição do Requisito  | Prioridade | Responsável |
+|------|-------------------------|------------|-------------|
+|RF-001| Completar a página de login | BAIXA | João Vitor|
+|RF-002| Forms para adicionar documentos e pastas | ALTA | Abdon França |
+|RF-003| Alteração da barra de navegação | ALTA | Guilherme Henrique|
+|RF-004| Funcionalidade da visualização de pastas | ALTA | Gabriel de Assis |
+|RF-005| Criação de uma página esboço para as páginas gerenciar equipes e gerenciar documentos | MÉDIA | Gabriel de Assis |
+|RF-006| Criação da página esboço perfil de usuário | MÉDIA | Raí Átila |

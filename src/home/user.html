@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <title>GEDAI</title>
+    </head>
+
+    <body class="background-home">
+        <div class="container-fluid p-0">
+            <!-- SideNav-->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="close">&times;</a>
+                <a href="index.html" class="font-jedi"><i class="fs-1 bi-house text-warning"></i> Home</a>
+                <a href="perfil.html" class="font-jedi"><i class="fs-1 bi bi-person-fill text-warning"></i> Perfil</a>
+                <a href="login.html" class="font-jedi"><i class=" fs-1 bi bi-box-arrow-left text-warning"></i> Sair</a>
+            </div>
+
+            <!-- Header-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark p-0">
+                <div class="collapse navbar-collapse d-flex justify-content-star p-3">
+                    <ul class="navbar-nav">
+                        <li id="menu" class="d-flex align-items-center mb-md-0 me-md-auto text-green text-light text-decoration-none font-jedi cursor">
+                            <i class="fs-1 bi-list text-warning"></i> <span class="ms-3 fs-1 d-none d-sm-inline">Menu</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse d-flex justify-content-end" id="conteudoNavbarSuportado">
+                    <ul class="navbar-nav mr-auto">
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--MAIN-->
+        <div class="container-fluid h-75 p-5">
+            <div class="row mb-md-5">
+                <div class="col-md-2" style="padding-left: 1.5%;">
+                    <div class="mb-1">
+                        <input type="email" class="form-control" id="pesquisarDocumento" placeholder="Pesquisar">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Filtrar</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                </div>
+                <div class="col-md-4"></div>
+
+                <div class="col-md-4 d-flex justify-content-end" style="padding-right: 1.5%;">
+
+                    <!-- Adicionar Usuario -->
+                    <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#user-modal">Adicionar Usuário</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table bg-light">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Sobrenome</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Cargo</th>
+                            <th scope="col">Permissão</th>
+                            <th scope="col">Telefone</th>
+                            <th scope="col"></th>
+                          </tr>
+                        </thead>
+                        <tbody id="user-list">
+                          
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <!--Modal Documentos-->
+            <div class="modal fade" id="user-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Informações do Usuário <span id="edit-user-id"></span></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="user-form" method="post" action="">
+                                <div class="form-group">
+                                    <label for="user-id" class="col-form-label">Código:</label>
+                                    <input type="number" class="form-control" id="user-id" min="1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-nome" class="col-form-label">Nome:</label>
+                                    <input type="text" class="form-control" id="user-nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-sobrenome" class="col-form-label">Sobrenome:</label>
+                                    <input type="text" class="form-control" id="user-sobrenome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-email" class="col-form-label">Email:</label>
+                                    <input type="email" class="form-control" id="user-email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-cargo" class="col-form-label">Cargo:</label>
+                                    <input type="text" class="form-control" id="user-cargo" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-permissao" class="col-form-label">Permissão:</label>
+                                    <input type="text" class="form-control" id="user-permissao" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-tel" class="col-form-label">Telefone:</label>
+                                    <input type="tel" class="form-control" id="user-tel" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-password" class="col-form-label">Password:</label>
+                                    <input type="text" class="form-control" id="user-password" required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                                </div>
+                            </form>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+
+            <!--Modal Excluir arquivos-->
+            <div class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog" role="user">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Confirmação de remoção</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Você realmente deseja remover o produto <span id="user-id"></span>?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary" id="btn-delete">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="jquery/jquery-3.6.1.min.js"></script>
+    <script src="docs.js"></script>
+    <script src="scripts.js"></script>
+    <script src="user.js"></script>
+</html>

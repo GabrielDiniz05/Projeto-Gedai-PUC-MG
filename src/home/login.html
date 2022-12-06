@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="scripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>GEDAI</title>
+</head>
+
+<body class="background-login">
+    <div class="container py-5 h-100 vh-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow bg-light" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center align-content-center">
+                        <h1 class="mb-5 font-jedi">gedai</h1>
+                        <div class="form-outline mb-4">
+                            <label class="form-label d-flex justify-content-start font-jedi" for="typeEmailX-2">Email: </label>
+                            <input type="email" id="typeEmailX-2" class="form-control form-control-lg" required />
+                        </div>
+                        <div class="form-outline mb-4">
+                            <label class="form-label d-flex justify-content-start font-jedi" for="typePasswordX-2">Senha: </label>
+                            <input type="password" id="typePasswordX-2" class="form-control form-control-lg" required />
+                        </div>
+                        <a href="index.html" class="btn btn-dark btn-lg btn-block font-jedi" type="button" id="login">login</a>
+                        <div class="form-outrline pt-2">
+                            <button type="button" class="btn btn-link font-jedi" data-bs-toggle="modal" data-bs-target="#exampleModal">Esqueceu a senha ?</button>
+                        </div>
+                        <div class="form-outrline pt-2">
+                            <button type="button" class="btn btn-link font-jedi" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastre-se</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Redefinir a senha</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Digite o e-mail da sua conta:</label>
+                                <input type="text" class="form-control" id="recipient-name" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" data-bs-target="#exampleModal2">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Redefinir a senha</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Nova senha:</label>
+                                <input type="password" class="form-control" id="recipient-name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Repetir nova senha</label>
+                                <input type="password" class="form-control" id="message-text" required></input>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="recarregar()">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="scripts.js"></script>
+<script src="docs.js"></script>
+<script src="pasta.js"></script>
+<!-- ALERTAS -->
+<script src="sweetalert/sweetalert2.all.min.js"></script>
+<!-- ALERTAS -->
+
+<!-- DATATABLE -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<!-- DATATABLE -->
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</html>

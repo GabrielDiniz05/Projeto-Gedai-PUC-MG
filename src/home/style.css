@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'Starjedi';
+    src: url('fonts/starjedi/Starjedi.ttf') format('opentype');
+    font-size: small;
+}
+
+
+/* div{
+    font-family: 'StarJedi';
+} */
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.font-jedi {
+    font-family: Starjedi;
+}
+
+.background-login {
+    background-image: url("img/Background3.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-home {
+    background-image: url("img/Background3.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.Inner-Box{
+    max-width: 650px;
+    position: relative;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(255, 255, 255,.4);
+    box-shadow: 0 15px 20px rgba(0,0,0,.2);
+    padding: 30px;
+    text-align: center;
+}
+
+.Inner-Box h1{
+    font-size: 45px;
+    font-family: Starjedi;
+}
+
+.Inner-Box input[type='file']{
+    display: none;
+}
+
+.max-widht {
+    max-width: 400px;
+    width: 100%;
+}
+
+#imgPhoto{
+    margin-top: 10%;
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    background-color: #eee;
+    border: 5px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+#imgPhoto:hover{
+    background-color: rgb(68, 67, 67);
+    border: 5px solid rgb(35, 35, 35);
+}
+
+.Inner-Box *{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+.txt-profile{
+    text-align: left;
+}
+
+.txt-profile input{
+    height: 40px;
+    width: 100%;
+    border-radius: 50px;
+    padding: 14px 30px;
+    border: 1px solid #111;
+}
+
+.txt-profile label{
+    font-size: 20px;
+    margin: 10px;
+    letter-spacing: 1px;
+    font-family: StarJedi;
+}
+
+.folder-gedai{
+    background: rgba(255, 255, 255,.4);
+}
